@@ -1,0 +1,21 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: postgres
+  username: postgres
+  password: mypassword
+
+development:
+  <<: *default
+  database: spotcode_development
+
+test:
+  <<: *default
+  database: spotcode_test
+
+# production:
+#   <<: *default
+#   database: spotcode_production
+#   username: spotcode
+#   password: <%= ENV['SPOTCODE_DATABASE_PASSWORD'] %>
